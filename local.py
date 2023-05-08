@@ -13,4 +13,11 @@ def mods(d):
             mods.append(moddir)
             keys.copy(moddir)
 
+
+    def getIndex(item):
+    try:
+        return int(item.split("@")[1].split("_")[0])
+    except:
+        return math.inf 
+    mods.sort(key=getIndex)
     return mods
